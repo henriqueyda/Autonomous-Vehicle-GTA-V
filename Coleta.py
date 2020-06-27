@@ -15,6 +15,8 @@ import os
 teclas = list('p'+'o'+'z'+'9')
 global Gravando, j, Fotos, Controle, cont;
 
+# Teste de commit
+
 #----------------------------------------------------------------------
 
 def listen(tecla):
