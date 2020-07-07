@@ -1,8 +1,7 @@
 '''
 Autonomous-Vehicle-GTA-V
-Gustavo and Henrique 
+Gustavo and Henrique
 '''
-
 #Bibliotecas utilizadas
 import numpy as np
 from PIL import ImageGrab
