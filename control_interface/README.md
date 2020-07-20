@@ -2,7 +2,7 @@
 
 This folder contains the source code and instructions to execute the interface developed to control vehicle inside GTA V game. This interface sends driving commands during simulations inside the game using as inputs real-time acquired images and normalized values of speed. These data are acquired with the data acquisition interface and are normalized to be used in model. The model output is processed using a virtual joystick simulated with vJoy driver and the Pvjoy library and software x360ce sends the commands to the game to control the vehicle.A diagram of the system is shown below:
 
-![](images/control_interface.png)
+![](Autonomous-Vehicle-GTA-V/images/control_interface.png)
 
 The instructions to run this program are the following:
 
