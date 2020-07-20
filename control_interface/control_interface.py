@@ -92,34 +92,33 @@ def Camera():
     print("Controlling")
     while Recording:
         last_time = time.time()
+        # Image Acquisition
+        screen =  np.array(ImageGrab.grab(bbox=None))
+        image = cv2.resize(screen,(L,H),interpolation=cv2.INTER_CUBIC)
+        image=image.reshape(1,H,L,3)
+        # Speed Acquisition
+        speed = np.roll(speed, -1)
+        Go=False
+        while not Go and Recording:
+            try:
+                shutil.copyfile('D://Speed.txt ', 'temp.txt')
+                file = open ( 'temp.txt ', "r" )
+                file_lines = file.readlines()
+                file.close()
+                spd = float(file_lines[len(file_lines)-1])
+                spd = (spd-53.5)/28
+                speed[0][0][49] = spd
+                Go = True
+            except Exception:
+                Go = False
+        # Control commands prediction - Neural Network
+        with graph.as_default():
+            Output = model.predict([image,speed])
+        # Sets driving commands in controller
         if Recording:
-            # Image Acquisition
-            screen =  np.array(ImageGrab.grab(bbox=None))
-            image = cv2.resize(screen,(L,H),interpolation=cv2.INTER_CUBIC)
-            image=image.reshape(1,H,L,3)
-            # Speed Acquisition
-            speed = np.roll(speed, -1)
-            Go=False
-            while not Go and Recording:
-                try:
-                    shutil.copyfile('D://Speed.txt ', 'temp.txt')
-                    file = open ( 'temp.txt ', "r" )
-                    file_lines = file.readlines()
-                    file.close()
-                    spd = float(file_lines[len(file_lines)-1])
-                    spd = (spd-53.5)/28
-                    speed[0][0][49] = spd
-                    Go = True
-                except Exception:
-                    Go = False
-            # Control commands prediction - Neural Network
-            with graph.as_default():
-                Output = model.predict([image,speed])
-            # Sets driving commands in controller
-            if Recording:
-                Vjoy.set_axis(pyvjoy.HID_USAGE_RZ,int(Maximum*Output[0][0]))
-                Vjoy.set_axis(pyvjoy.HID_USAGE_Z, int(Maximum*Output[0][1]))
-                Vjoy.set_axis(pyvjoy.HID_USAGE_X, int(Maximum*Output[0][2]))
+            Vjoy.set_axis(pyvjoy.HID_USAGE_RZ,int(Maximum*Output[0][0]))
+            Vjoy.set_axis(pyvjoy.HID_USAGE_Z, int(Maximum*Output[0][1]))
+            Vjoy.set_axis(pyvjoy.HID_USAGE_X, int(Maximum*Output[0][2]))
         # Checks for control delay 
         if (time.time()-last_time) < tim:
             time.sleep((tim-(time.time()-last_time)))

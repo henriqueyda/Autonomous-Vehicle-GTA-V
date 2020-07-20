@@ -1,10 +1,12 @@
+
+
+
+
 ->Configurando ambiente
     -Crie o arquivo Velocidade.txt no diretório D
     -Coloque o arquivo Velocidade.asi na pasta do jogo
     -Baixe a biblioteca ScriptHookV.dll e siga as intruções em [1]
-    -Instale as bibliotecas necessárias e os programas x360ce e vJoy
-    -Coloque o programa x360ce na pasta do jogo
-    -É necessário indicar o local e o nome da rede neural que será utilizada no código da interface
+    -Dependendo do joustick utilizado, coloque o programa x360ce na pasta do jogo
 
 ->Iniciano o mod
     -Entre no veículo que será utilizado na simulação
@@ -16,9 +18,10 @@
 ->Executando a interface de controle
     Após pressionar umas das teclas de controle, executa a função correspondente.
         Teclas:
-            o: Inicia o controle do veiculo
-            p: Desliga a atuação do controle no ambiente de simulação
-            z: Encerra a execução do programa de controle
+            o: Inicia a gravação
+            p: Para a gravação atual e salva os dados
+            z: Encerra a execução do programa de aquisição
+            9: Para a gravação sem salvar os dados
     Configurações do mod:
         NUM_1: Diminui o contador que avança o horário de jogo a cada 1 segundo
         NUM_2: Aumenta o contador que avança o horário do jogo a cada 1 segundo

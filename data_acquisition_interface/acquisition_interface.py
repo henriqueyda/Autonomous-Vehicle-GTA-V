@@ -93,31 +93,30 @@ def Camera():
     #Data acquisition loop
     while Recording:
         last_time = time.time()
-        if Recording:
-            #Screen capture
-            screen =  np.array(ImageGrab.grab(bbox=None))
-            image = cv2.resize(screen,(L,H),interpolation=cv2.INTER_CUBIC)
-            #Reads txt file with speed values
-            Go=False
-            while not Go:
-                try:
-                    shutil.copyfile('D://Velocidade.txt ', 'temp.txt')
-                    file = open ( 'temp.txt ', "r" )
-                    file_lines = file.readlines()
-                    file.close()
-                    speed = float(file_lines[len(file_lines)-1])
-                    Go = True
-                except Exception:
-                    Go = False
-            #Reads joystick buttons
-            events = pygame.event.get()
-            output=[(j.get_axis(4)+1)/2,(j.get_axis(5)+1)/2,(j.get_axis(0)+1)/2, speed]
-            #Puts data in numpy array
-            Photos[i]=image
-            Control[i,:]=output
-            #Prints after every 50 samples
-            if i%50==0:
-                print(i, " Images")
+        #Screen capture
+        screen =  np.array(ImageGrab.grab(bbox=None))
+        image = cv2.resize(screen,(L,H),interpolation=cv2.INTER_CUBIC)
+        #Reads txt file with speed values
+        Go=False
+        while not Go:
+            try:
+                shutil.copyfile('D://Speed.txt ', 'temp.txt')
+                file = open ( 'temp.txt ', "r" )
+                file_lines = file.readlines()
+                file.close()
+                speed = float(file_lines[len(file_lines)-1])
+                Go = True
+            except Exception:
+                Go = False
+        #Reads joystick buttons
+        events = pygame.event.get()
+        output=[(j.get_axis(4)+1)/2,(j.get_axis(5)+1)/2,(j.get_axis(0)+1)/2, speed]
+        #Puts data in numpy array
+        Photos[i]=image
+        Control[i,:]=output
+        #Prints after every 50 samples
+        if i%50==0:
+            print(i, " Images")
         cont=i
         i=i+1
 
