@@ -28,6 +28,7 @@ The instructions to run this program are the following:
         - p: Turns off vehicle control in simulation environment
         - z: Stops program execution
 - Mod configuration:
+    - Keys:
         - NUM_1: Decreases counter that fast-foward time in one second
         - NUM_2: Increases counter that fast-foward time in one second
         - NUM_8: Turns on/off speed print on screen
