@@ -1,29 +1,34 @@
+# Data Acquisition Interface
 
+This folder contains the source code and instructions to run the interface developed to collect training data inside GTA V game. This interface captures real-time images displayed on screen at 10 fps rate using the ImageGrab module from Python library Pillow. Driving data is collected with the PyGame library that reads the joystick and triggers commands from a controller handled by a human driver. In-game modifications named ScriptHookV and Native TrainerSpeed are used to collect speed data. A diagram of the system is shown below:
 
+<img src="https://github.com/henriqueyda/Autonomous-Vehicle-GTA-V/blob/master/images/data_acquisition_interface.png" width=600>
 
+Instructions to run this program are the following:
 
-->Configurando ambiente
-    -Crie o arquivo Velocidade.txt no diretório D
-    -Coloque o arquivo Velocidade.asi na pasta do jogo
-    -Baixe a biblioteca ScriptHookV.dll e siga as intruções em [1]
-    -Dependendo do joustick utilizado, coloque o programa x360ce na pasta do jogo
+**Preparing System**
+- Create file Velocidade.txt in (D:) directory
+- Insert Velocidade.asi file in GTA V folder (in Steam usually is: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V)
+- Download ScriptHookV.dll mod library and follow instructions in http://www.dev-c.com/gtav/scripthookv
+- Insert x360ce in GTA V folder
 
-->Iniciano o mod
-    -Entre no veículo que será utilizado na simulação
-    -Aperte F4 para ligar o mod
-    -O texto "ligando" deve aparecer na tela
-    -Aperte NUM_9 para começar a monitorar a velocidade do veiculo
-    -A mensagem "Comunicar ativado" aparecerá na tela
+**Starting Mod**
+- Get into a car inside game
+- Press F4 to execute program 
+- The text "ligando" will appear on screen
+- Press key NUM_9 to check speed values in real time
+- The text "Comunicar ativado" will appear on screen
 
-->Executando a interface de controle
-    Após pressionar umas das teclas de controle, executa a função correspondente.
-        Teclas:
-            o: Inicia a gravação
-            p: Para a gravação atual e salva os dados
-            z: Encerra a execução do programa de aquisição
-            9: Para a gravação sem salvar os dados
-    Configurações do mod:
-        NUM_1: Diminui o contador que avança o horário de jogo a cada 1 segundo
-        NUM_2: Aumenta o contador que avança o horário do jogo a cada 1 segundo
-        NUM_8: Liga e desliga exibição da velocidade na tela
-        NUM_9: Liga e desliga a atulização da velocidade no arquivo Velocidade.txt
+**Data Acquisition Interface Execution**
+- Each key execute the described function
+    - Keys:
+        - o: Starts recording
+        - p: Stops current recording and save data
+        - z: Stops program execution
+        - 9: Stops recording without saving data
+- Mod configuration:
+    - Keys:
+        - NUM_1: Decreases counter that fast-foward time in one second
+        - NUM_2: Increases counter that fast-foward time in one second
+        - NUM_8: Turns on/off speed print on screen
+        - NUM_9: Turns on/off speed recording in Velocidade.txt file

@@ -7,9 +7,9 @@ This folder contains the source code and instructions to execute the interface d
 The instructions to run this program are the following:
 
 **Preparing System**
-- Create speed.txt file in (D:) directory 
+- Create Speed.txt file in (D:) directory 
 - Insert Velocidade.asi file in GTA V folder (in Steam usually is: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V)
-- Download ScriptHookV.dll mod library and follow instruction in http://www.dev-c.com/gtav/scripthookv
+- Download ScriptHookV.dll mod library and follow instructions in http://www.dev-c.com/gtav/scripthookv
 - Install x360ce and vJoy 
 - Insert x360ce in GTA V folder
 - Insert path to neural network model in "Model" variable
@@ -21,7 +21,7 @@ The instructions to run this program are the following:
 - Press key NUM_9 to check speed values in real time
 - The text "Comunicar ativado" will appear on screen
 
-**Executando a interface de controle**
+**Control Interface Execution**
 - Each key execute the described function
     - Keys:
         - o: Starts vehicle control
@@ -32,4 +32,4 @@ The instructions to run this program are the following:
         - NUM_1: Decreases counter that fast-foward time in one second
         - NUM_2: Increases counter that fast-foward time in one second
         - NUM_8: Turns on/off speed print on screen
-        - NUM_9: Turns on/off speed recording in Speed.txt file
+        - NUM_9: Turns on/off speed recording in Velocidade.txt file
