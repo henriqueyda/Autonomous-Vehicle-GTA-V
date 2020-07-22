@@ -158,7 +158,7 @@ j = pygame.joystick.Joystick(0)
 j.init()
 
 #Starts threads to read keys [1]
-keybd = [Thread(target=listen, kwargs={"tecla":key}) for key in keys]
+keybd = [Thread(target=listen, kwargs={"key":key}) for key in keys]
 for thread in keybd:
     thread.start()
 #----------------------------------------

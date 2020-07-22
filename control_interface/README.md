@@ -17,9 +17,9 @@ The instructions to run this program are the following:
 **Starting Mod**
 - Get into a car inside game
 - Press F4 to execute program 
-- The text "ligando" will appear on screen
+- The text "Starting" will appear on screen
 - Press key NUM_9 to check speed values in real time
-- The text "Comunicar ativado" will appear on screen
+- The text "Speed values recording enabled" will appear on screen
 
 **Control Interface Execution**
 - Each key execute the described function
@@ -31,5 +31,5 @@ The instructions to run this program are the following:
     - Keys:
         - NUM_1: Decreases counter that fast-foward time in one second
         - NUM_2: Increases counter that fast-foward time in one second
-        - NUM_8: Turns on/off speed print on screen
-        - NUM_9: Turns on/off speed recording in Velocidade.txt file
+        - NUM_8: Turns on/off speed printing on screen
+        - NUM_9: Turns on/off speed recording in Speed.txt file

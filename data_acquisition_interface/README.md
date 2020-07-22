@@ -7,17 +7,18 @@ This folder contains the source code and instructions to run the interface devel
 Instructions to run this program are the following:
 
 **Preparing System**
-- Create file Velocidade.txt in (D:) directory
-- Insert Velocidade.asi file in GTA V folder (in Steam usually is: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V)
+- Create file Speed.txt in (D:) directory
+- Insert Speed.asi file in GTA V folder (in Steam usually is: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V)
 - Download ScriptHookV.dll mod library and follow instructions in http://www.dev-c.com/gtav/scripthookv
 - Insert x360ce in GTA V folder
+- Create a folder named "Data" in same directory of "acquisition_interface.py" file
 
 **Starting Mod**
 - Get into a car inside game
 - Press F4 to execute program 
-- The text "ligando" will appear on screen
-- Press key NUM_9 to check speed values in real time
-- The text "Comunicar ativado" will appear on screen
+- The text "Starting" will appear on screen
+- Press key NUM_9 to enable speed values recording 
+- The text "Speed values recording enabled" will appear on screen
 
 **Data Acquisition Interface Execution**
 - Each key execute the described function
@@ -30,5 +31,5 @@ Instructions to run this program are the following:
     - Keys:
         - NUM_1: Decreases counter that fast-foward time in one second
         - NUM_2: Increases counter that fast-foward time in one second
-        - NUM_8: Turns on/off speed print on screen
-        - NUM_9: Turns on/off speed recording in Velocidade.txt file
+        - NUM_8: Turns on/off speed values printing on screen
+        - NUM_9: Turns on/off speed recording in Speed.txt file

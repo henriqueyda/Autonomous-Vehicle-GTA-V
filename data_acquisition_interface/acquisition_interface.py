@@ -110,7 +110,7 @@ def Camera():
                 Go = False
         #Reads joystick buttons
         events = pygame.event.get()
-        output=[(j.get_axis(4)+1)/2,(j.get_axis(5)+1)/2,(j.get_axis(0)+1)/2, speed]
+        output=[(j.get_axis(4)+1)/2,(j.get_axis(5)+1)/2,(j.get_axis(1)+1)/2, speed]
         #Puts data in numpy array
         Photos[i]=image
         Control[i,:]=output
@@ -169,7 +169,7 @@ def Save(x,y):
 
 
 #Starts threads to read keys [1]
-keybd = [Thread(target=listen, kwargs={"tecla":key}) for key in keys]
+keybd = [Thread(target=listen, kwargs={"key":key}) for key in keys]
 for thread in keybd:
     thread.start()
 
