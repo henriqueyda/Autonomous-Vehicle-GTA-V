@@ -8,9 +8,9 @@ The instructions to run this program are the following:
 
 **Preparing System**
 - Create Speed.txt file in (D:) directory 
-- Insert Velocidade.asi file in GTA V folder (in Steam usually is: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V)
+- Insert Speed.asi (Speed.asi is a modified Native Trainer file) in GTA V folder (in Steam usually is: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V)
 - Download ScriptHookV.dll mod library and follow instructions in http://www.dev-c.com/gtav/scripthookv
-- Install x360ce and vJoy 
+- Install x360ce (https://www.x360ce.com/) and vJoy (https://headsoft.com.au/index.php?category=vjoy)
 - Insert x360ce.exe in GTA V folder
 - Insert path to neural network model in "Model" variable
 
