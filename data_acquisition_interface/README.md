@@ -8,12 +8,12 @@ Instructions to run this program are the following:
 
 **Preparing System**
 - Create file Speed.txt in (D:) directory
-- Insert Speed.asi file in GTA V folder (in Steam usually is: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V)
+- Insert Speed.asi (Speed.asi is a modified Native Trainer file) in GTA V folder (in Steam usually is: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V)
 - Download ScriptHookV.dll mod library and follow instructions in http://www.dev-c.com/gtav/scripthookv
-- Insert x360ce.exe in GTA V folder
+- Insert x360ce.exe (https://www.x360ce.com/) in GTA V folder
 - When controller is connected to computer, configure it in x360ce interface and check controller number, left and right trigger axis and stick axis x. 
 
-<img src="https://github.com/henriqueyda/Autonomous-Vehicle-GTA-V/blob/master/images/x360ce_configuration.png" width=600>
+<img src="https://github.com/henriqueyda/Autonomous-Vehicle-GTA-V/blob/master/images/x360_configuration.png" width=600>
 
 - Edit the following variables in "acquisition_interface.py" file according with obtained information in x360ce:
     - j: insert controller number  
