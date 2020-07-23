@@ -11,14 +11,14 @@ The instructions to run this program are the following:
 - Insert Velocidade.asi file in GTA V folder (in Steam usually is: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V)
 - Download ScriptHookV.dll mod library and follow instructions in http://www.dev-c.com/gtav/scripthookv
 - Install x360ce and vJoy 
-- Insert x360ce in GTA V folder
+- Insert x360ce.exe in GTA V folder
 - Insert path to neural network model in "Model" variable
 
 **Starting Mod**
 - Get into a car inside game
 - Press F4 to execute program 
 - The text "Starting" will appear on screen
-- Press key NUM_9 to check speed values in real time
+- Press key NUM_9 to enable speed values recording 
 - The text "Speed values recording enabled" will appear on screen
 
 **Control Interface Execution**
@@ -33,3 +33,5 @@ The instructions to run this program are the following:
         - NUM_2: Increases counter that fast-foward time in one second
         - NUM_8: Turns on/off speed printing on screen
         - NUM_9: Turns on/off speed recording in Speed.txt file
+
+Note: This model was run in an AMD GPU, so it was necessary to install plaidml library. For NVIDIA GPUs install CUDA.

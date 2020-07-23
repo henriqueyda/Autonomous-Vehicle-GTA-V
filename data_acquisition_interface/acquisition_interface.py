@@ -76,10 +76,13 @@ def Camera():
     n=10000 # Maximum number of examples to save
     L=240 #Image width
     H=150 #Image height
-    Fotos=np.zeros((n,H,L,3),dtype='uint8') #Image array
+    Photos=np.zeros((n,H,L,3),dtype='uint8') #Image array
     Controle=np.zeros((n,4)) #Driving commands and speed array
     i=0 #Counter
     time_between=0.1 # Time between two consecutive acquisitions
+    ltrigger = j.get_axis(4)
+    rtrigger = j.get_axis(5)
+    lstickx = j.get_axis(1)
 
     #Waits a few seconds before start
     for i in list(range(4))[::-1]:
@@ -110,7 +113,7 @@ def Camera():
                 Go = False
         #Reads joystick buttons
         events = pygame.event.get()
-        output=[(j.get_axis(4)+1)/2,(j.get_axis(5)+1)/2,(j.get_axis(1)+1)/2, speed]
+        output=[(ltrigger+1)/2,(rtrigger+1)/2,(lstickx+1)/2, speed]
         #Puts data in numpy array
         Photos[i]=image
         Control[i,:]=output
